@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:llmapp/extensions.dart';
 
 class HeaderBar extends StatelessWidget {
   final String title;
@@ -13,12 +14,14 @@ class HeaderBar extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: Text(title, style: Theme.of(context).textTheme.titleLarge),
+            child: Text(
+              title.capitalize(),
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
           ),
-          TextButton.icon(
+          IconButton(
             onPressed: onReset,
-            icon: const Icon(Icons.refresh),
-            label: const Text('Reset'),
+            icon: const Row(children: [Icon(Icons.refresh), Text('Reset')]),
           ),
         ],
       ),

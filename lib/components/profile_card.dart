@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:llmapp/extensions.dart';
 
 class ProfileCard extends StatelessWidget {
   final String name;
@@ -28,8 +29,11 @@ class ProfileCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(name, style: Theme.of(context).textTheme.titleMedium),
-              Text(role),
+              Text(
+                name.capitalize(),
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              Text(role.capitalize()),
             ],
           ),
         ],
