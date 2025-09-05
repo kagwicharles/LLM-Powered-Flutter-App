@@ -39,12 +39,6 @@ class LayoutBloc extends Bloc<LayoutEvent, LayoutState> {
             largeCard: c.props['large'] == true ? true : newState.largeCard,
           );
           break;
-        case 'info':
-          newState = newState.copyWith(
-            showInfo: c.props['visible'] != false,
-            infoText: c.props['text'] as String? ?? newState.infoText,
-          );
-          break;
         case 'textfield':
           var label = c.props['label'] as String? ?? 'Input';
           TextFieldData textFieldData = TextFieldData(label: label);

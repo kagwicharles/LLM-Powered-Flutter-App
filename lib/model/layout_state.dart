@@ -13,7 +13,6 @@ class LayoutState {
   final bool showCounter;
   final int counter;
   final bool showInfo;
-  final String infoText;
   final List<TextFieldData>? textFields;
   final Color? textFieldColor;
   final bool showSubmitButton;
@@ -31,7 +30,6 @@ class LayoutState {
     this.showCounter = true,
     this.counter = 0,
     this.showInfo = true,
-    this.infoText = 'Type a prompt below, e.g.\n"change background to blue"',
     this.textFields,
     this.textFieldColor,
     this.showSubmitButton = false,
@@ -47,7 +45,6 @@ class LayoutState {
     bool? showCounter,
     int? counter,
     bool? showInfo,
-    String? infoText,
     List<TextFieldData>? textFields,
     Color? textFieldColor,
     bool? showSubmitButton,
@@ -62,7 +59,6 @@ class LayoutState {
       showCounter: showCounter ?? this.showCounter,
       counter: counter ?? this.counter,
       showInfo: showInfo ?? this.showInfo,
-      infoText: infoText ?? this.infoText,
       textFields: textFields ?? this.textFields,
       textFieldColor: textFieldColor ?? this.textFieldColor,
       showSubmitButton: showSubmitButton ?? this.showSubmitButton,

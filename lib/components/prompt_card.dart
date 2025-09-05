@@ -15,6 +15,7 @@ class PromptCard extends StatelessWidget {
         children: [
           Expanded(
             child: TextField(
+              maxLines: 2,
               controller: controller,
               onSubmitted: (value) {
                 if (value.trim().isEmpty) return;
@@ -22,7 +23,7 @@ class PromptCard extends StatelessWidget {
                 controller.clear();
               },
               decoration: const InputDecoration(
-                hintText: 'Type a prompt…',
+                hintText: 'Type a prompt… e.g."change background to blue',
                 border: OutlineInputBorder(),
               ),
             ),

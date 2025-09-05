@@ -4,7 +4,6 @@ import 'package:llmapp/prompt_parser.dart';
 
 import 'bloc/layout_bloc.dart';
 import 'components/header.dart';
-import 'components/info_card.dart';
 import 'components/profile_card.dart';
 import 'components/prompt_card.dart';
 import 'constants.dart';
@@ -67,9 +66,14 @@ class PlaygroundScreen extends StatelessWidget {
                           if (state.showSubmitButton)
                             ElevatedButton(
                               onPressed: () {},
+                              style: ButtonStyle(
+                                minimumSize: WidgetStatePropertyAll(
+                                  Size(double.infinity, 48),
+                                ),
+                              ),
                               child: Text('Submit'),
                             ),
-                          if (state.showInfo) InfoCard(text: state.infoText),
+                          SizedBox(height: 24),
                         ],
                       ),
                     ),
