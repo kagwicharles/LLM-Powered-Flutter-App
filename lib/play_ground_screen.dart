@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:llmapp/prompt_parser.dart';
+import 'package:llmapp/hardcoded_prompt_parser.dart';
 
 import 'bloc/layout_bloc.dart';
 import 'components/header.dart';
@@ -80,7 +80,7 @@ class PlaygroundScreen extends StatelessWidget {
                   ),
                   PromptCard(
                     onSubmit: (text) {
-                      final ins = PromptParser.tryParse(text);
+                      final ins = HardcodedPromptParser.tryParse(text);
                       if (ins != null) {
                         context.read<LayoutBloc>().add(ApplyInstruction(ins));
                       }

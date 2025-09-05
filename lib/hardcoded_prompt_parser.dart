@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'model/layout_instruction.dart';
 
-class PromptParser {
+class HardcodedPromptParser {
   static final Map<String, String> _mappings = {
     'change background to blue': jsonEncode({
       'background': {
