@@ -83,6 +83,18 @@ class PlaygroundScreen extends StatelessWidget {
                       final ins = HardcodedPromptParser.tryParse(text);
                       if (ins != null) {
                         context.read<LayoutBloc>().add(ApplyInstruction(ins));
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Row(
+                              children: [
+                                Icon(Icons.warning, color: Colors.yellow),
+                                Text('Could not understand the prompt.'),
+                              ],
+                            ),
+                            backgroundColor: Colors.red,
+                          ),
+                        );
                       }
                     },
                   ),
