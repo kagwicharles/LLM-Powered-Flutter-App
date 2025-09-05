@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'background_spec.dart';
+import 'textfield_data.dart';
 
 class LayoutState {
   final String title;
@@ -11,6 +14,9 @@ class LayoutState {
   final int counter;
   final bool showInfo;
   final String infoText;
+  final List<TextFieldData>? textFields;
+  final Color? textFieldColor;
+  final bool showSubmitButton;
 
   LayoutState({
     this.title = 'Mobile UI Playground',
@@ -26,6 +32,9 @@ class LayoutState {
     this.counter = 0,
     this.showInfo = true,
     this.infoText = 'Type a prompt below, e.g.\n"change background to blue"',
+    this.textFields,
+    this.textFieldColor,
+    this.showSubmitButton = false,
   });
 
   LayoutState copyWith({
@@ -39,6 +48,9 @@ class LayoutState {
     int? counter,
     bool? showInfo,
     String? infoText,
+    List<TextFieldData>? textFields,
+    Color? textFieldColor,
+    bool? showSubmitButton,
   }) {
     return LayoutState(
       title: title ?? this.title,
@@ -51,6 +63,9 @@ class LayoutState {
       counter: counter ?? this.counter,
       showInfo: showInfo ?? this.showInfo,
       infoText: infoText ?? this.infoText,
+      textFields: textFields ?? this.textFields,
+      textFieldColor: textFieldColor ?? this.textFieldColor,
+      showSubmitButton: showSubmitButton ?? this.showSubmitButton,
     );
   }
 }

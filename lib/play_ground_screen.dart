@@ -43,6 +43,32 @@ class PlaygroundScreen extends StatelessWidget {
                               role: state.profileRole,
                               large: state.largeCard,
                             ),
+                          ...?state.textFields?.asMap().entries.map((entry) {
+                            final field = entry.value;
+                            return Container(
+                              margin: EdgeInsets.all(4),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 4.0,
+                                ),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    filled: true,
+                                    fillColor:
+                                        state.textFieldColor ?? Colors.white,
+                                    labelText: field.label,
+                                    border: OutlineInputBorder(),
+                                  ),
+                                ),
+                              ),
+                            );
+                          }),
+                          SizedBox(height: 24),
+                          if (state.showSubmitButton)
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Submit'),
+                            ),
                           if (state.showInfo) InfoCard(text: state.infoText),
                         ],
                       ),

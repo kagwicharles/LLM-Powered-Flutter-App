@@ -25,6 +25,38 @@ class PromptParser {
         },
       ],
     }),
+    'add textfield email': jsonEncode({
+      'components': [
+        {
+          'type': 'textfield',
+          'props': {'label': 'Email'},
+        },
+      ],
+    }),
+    'add textfield username': jsonEncode({
+      'components': [
+        {
+          'type': 'textfield',
+          'props': {'label': 'Username'},
+        },
+      ],
+    }),
+    'add textfield password': jsonEncode({
+      'components': [
+        {
+          'type': 'textfield',
+          'props': {'label': 'Password'},
+        },
+      ],
+    }),
+    'add submit button': jsonEncode({
+      'components': [
+        {
+          'type': 'button',
+          'props': {'label': 'Submit'},
+        },
+      ],
+    }),
     'reset': jsonEncode({'reset': true}),
   };
 

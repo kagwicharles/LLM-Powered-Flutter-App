@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../model/layout_instruction.dart';
 import '../model/layout_state.dart';
+import '../model/textfield_data.dart';
 
 part 'bloc_layout_event.dart';
 
@@ -25,6 +27,9 @@ class LayoutBloc extends Bloc<LayoutEvent, LayoutState> {
     }
 
     for (final c in ins.components) {
+      debugPrint(
+        'Applying component: ${ins.components.length} ${c.type} ${c.props}>>>>>>',
+      );
       switch (c.type) {
         case 'profile_card':
           newState = newState.copyWith(
@@ -39,6 +44,16 @@ class LayoutBloc extends Bloc<LayoutEvent, LayoutState> {
             showInfo: c.props['visible'] != false,
             infoText: c.props['text'] as String? ?? newState.infoText,
           );
+          break;
+        case 'textfield':
+          var label = c.props['label'] as String? ?? 'Input';
+          TextFieldData textFieldData = TextFieldData(label: label);
+          newState = newState.copyWith(
+            textFields: [...?newState.textFields, textFieldData],
+          );
+          break;
+        case 'button':
+          newState = newState.copyWith(showSubmitButton: true,);
           break;
       }
     }
