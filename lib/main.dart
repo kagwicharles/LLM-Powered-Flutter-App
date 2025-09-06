@@ -29,4 +29,3 @@ class PlaygroundApp extends StatelessWidget {
     );
   }
 }
-

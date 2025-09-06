@@ -134,7 +134,6 @@ class HardcodedPromptParser {
         ],
       });
     }
-
     return null;
   }
 
