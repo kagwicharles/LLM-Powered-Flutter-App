@@ -1,16 +1,30 @@
-# llmapp
+# 📱 LLMApp - Mobile UI Playground
 
-A new Flutter project.
+A Flutter app that showcases how users can **dynamically update UI properties** through **natural language prompts**.  
+The app parses user instructions into structured layout commands and applies them in real-time.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🖌️ Change background color with a simple text prompt
+- 📝 Update the app title dynamically
+- 👤 Show a profile card with name and role
+- 🔑 Add form fields like **email**, **username**, and **password**
+- 🔘 Add buttons such as **Submit**
+- ♻️ Reset the entire UI to its initial state
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Getting Started
+
+### 1. Prerequisites
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (≥ 3.8.1)
+- Android Studio / VS Code with Flutter & Dart plugins
+- Android SDK / Xcode (for iOS builds)
+- Gradle 8.9 (already managed by `gradle-wrapper.properties`)
+
+### 2. Clone the repository
+```bash
+git clone https://github.com/<your-username>/llmapp.git
+cd llmapp
