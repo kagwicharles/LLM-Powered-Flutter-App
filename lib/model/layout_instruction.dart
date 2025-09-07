@@ -1,6 +1,5 @@
-
-import 'background_spec.dart';
-import 'component_instruction.dart';
+import 'package:llmapp/model/background_spec.dart';
+import 'package:llmapp/model/component_instruction.dart';
 
 class LayoutInstruction {
   final String? title;

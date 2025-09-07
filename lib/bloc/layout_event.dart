@@ -3,9 +3,9 @@ part of 'layout_bloc.dart';
 abstract class LayoutEvent {}
 
 class ApplyInstruction extends LayoutEvent {
-  final LayoutInstruction instruction;
+  final LayoutInstruction layoutInstruction;
 
-  ApplyInstruction(this.instruction);
+  ApplyInstruction(this.layoutInstruction);
 }
 
 class ResetLayout extends LayoutEvent {}

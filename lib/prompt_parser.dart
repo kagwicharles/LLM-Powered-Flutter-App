@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'model/layout_instruction.dart';
+import 'package:llmapp/model/layout_instruction.dart';
 
-class HardcodedPromptParser {
+class PromptParser {
   static final Map<String, String> _mappings = {
     'change background to blue': jsonEncode({
       'background': {
@@ -12,18 +12,16 @@ class HardcodedPromptParser {
     }),
     'update title to hello world': jsonEncode({'title': 'Hello World'}),
     'show profile card': jsonEncode({
-      'components': [
-        {
-          'type': 'profile_card',
-          'props': {'name': 'Charles', 'role': 'Mobile Engineer'},
-        },
-      ],
+      'components': {
+        'type': 'profile_card',
+        'props': {'name': 'Charles', 'role': "Mobile Developer"},
+      },
     }),
     'add textfield email': jsonEncode({
       'components': [
         {
           'type': 'textfield',
-          'props': {'label': 'Email'},
+          'props': {'label': 'email'},
         },
       ],
     }),
@@ -39,7 +37,7 @@ class HardcodedPromptParser {
       'components': [
         {
           'type': 'textfield',
-          'props': {'label': 'Password'},
+          'pros': {'label': 'Password'},
         },
       ],
     }),
