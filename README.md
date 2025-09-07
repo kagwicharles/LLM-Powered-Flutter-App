@@ -29,13 +29,11 @@ The app parses user instructions into structured layout commands and applies the
 git clone https://github.com/kagwicharles/LLM-Powered-Flutter-App.git
 cd llmapp
 ```
+
 ## 📸 Screenshots
+<p align="center">
+  <img src="screenshots/1.jpg" alt="Original UI State" width="250"/>
+  <img src="screenshots/2.jpg" alt="Changed Background to Red" width="250"/>
+  <img src="screenshots/3.jpg" alt="Added Form Fields" width="250"/>
+</p>
 
-### 1️⃣ Original UI State
-![Original UI State](screenshots/home.png)
-
-### 2️⃣ Changed Background to Red
-![Changed Background to Red](screenshots/login.png)
-
-### 3️⃣ Added Form Fields
-![Added Form Fields](screenshots/dashboard.png)
